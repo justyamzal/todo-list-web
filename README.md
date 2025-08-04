@@ -26,5 +26,4 @@ Gambaran Alur Aplikasi:
 - Pada tampilan interface di kolom To Do list, list to do yang telah diketik oleh user ditampilkan dengan icon checkbox di sampingnya.
 - Icon checkbox dapat diklik dan ketika diklik to do tersebut akan tercoret.
 - To Do yang tercoret akan tertulis dalam list kolom done.
-====================
 
