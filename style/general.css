@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --color-primary-bg: #DFF2EB;
+  --color-accent: #B9E5E8;
+  --color-secondary: #7AB2D3;
+  --color-dark: #4A628A;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-primary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+  
+}
+
