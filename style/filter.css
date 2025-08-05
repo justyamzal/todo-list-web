@@ -8,7 +8,7 @@
     border: 1px solid var(--color-dark);
 }
 
-.filter-section h3 {
+.form-title {
     margin-bottom: 10px;
 }
 
@@ -54,13 +54,11 @@
     background-color: var(--color-dark);
 }
 
-
 #filter-date, #show-all-btn {
     padding: 10px;
     border-radius: 8px; 
     cursor: pointer;
 }
-
 
 @media (max-width: 600px) {
     .filter-controls {

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/form.css">
     <link rel="stylesheet" href="style/filter.css">
+    <link rel="stylesheet" href="style/list.css">
     <!-- Google Fonts   -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
    <!-- Font Awesome -->
@@ -37,7 +38,7 @@
             <section class="dashboard" id="dashboard"></section>
 
             <form action="" class="todo-form">
-                <h3>Buat Tugas Baru</h3>
+                <h2 class="form-title">Buat Tugas Baru</h2>
                 <input type="hidden" id="task-edit-id">
                 <textarea name="" id="task-input" placeholder="Tuliskan tugasmu disini..." required></textarea>
                 <div class="form-controls">
@@ -53,13 +54,27 @@
             </form>
 
             <section class="filter-section">
-                <h3>Filter Tugas</h3>
+                <h3 class="filter-title">Filter Tugas</h3>
                 <div class="filter-controls">
                     <label for="filter-date" class="filter-component"  id="filter-label">Tampilkan tugas untuk tanggal :</label>
                     <input type="date" class="filter-component"  id="filter-date">
                     <button class="filter-component" id="show-all-btn">Tampilkan Semua</button>
                 </div>
             </section>
+
+            <section class="list-section">
+                <h2 class="list-title">Todo</h2>
+                <ul id="todo-list" class="task-list"></ul>
+            </section>
+
+            <section class="list-section">
+                <h2 class="list-title">Done</h2>
+                <ul id="done-list" class="task-list"></ul>
+            </section>
+
+            <div class="btn-wrapper">
+                <button id="delete-all-btn">Hapus Semua Tugas</button>
+            </div>
 
         </main>
 
