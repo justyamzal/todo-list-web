@@ -8,6 +8,7 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="style/general.css">
     <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/form.css">
     <!-- Google Fonts   -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
    <!-- Font Awesome -->
@@ -32,6 +33,23 @@
         </header>
 
         <main>
+            <section class="dashboard" id="dashboard"></section>
+
+            <form action="" class="todo-form">
+                <h3>Buat Tugas Baru</h3>
+                <input type="hidden" id="task-edit-id">
+                <textarea name="" id="task-input" placeholder="Tuliskan tugasmu disini..." required></textarea>
+                <div class="form-controls">
+                    <select name="" id="priority-input">
+                        <option value="low">Prioritas Rendah</option>
+                        <option value="medium">Prioritas Sedang</option>
+                        <option value="high">Prioritas Tinggi</option>
+                    </select>
+                    <label for="due-date-input" id="deadline-label">Deadline : </label>
+                    <input type="date" id="due-date-input" required>
+                    <button type="submit" class="submit-btn" id="submit-task-btn">Submit</button>
+                </div>
+            </form>
 
         </main>
 
