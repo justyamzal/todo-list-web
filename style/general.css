@@ -5,7 +5,8 @@
 }
 
 :root {
-  --color-primary-bg: #DFF2EB;
+  --color-bg: #f0f2f5;
+  --color-primary: #DFF2EB;
   --color-accent: #B9E5E8;
   --color-secondary: #7AB2D3;
   --color-dark: #4A628A;
@@ -13,14 +14,21 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--color-primary-bg);
+    background-color: var(--color-bg);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    color: var(--color-primary);
 }
 
 .app-container {
+  width: 100%;
+  max-width: 600px;
+  background-color:var(--color-dark);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
   
 }
 
