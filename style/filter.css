@@ -1,0 +1,71 @@
+.filter-section {
+    background-color: var(--color-accent);
+    color: var(--color-dark); 
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid var(--color-dark);
+}
+
+.filter-section h3 {
+    margin-bottom: 10px;
+}
+
+.filter-controls {
+    /* display: flex;
+    align: center;
+    flex-wrap: wrap;
+    gap: 10px; */
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "label date-input show";
+    gap: 10px;
+}
+
+#filter-label {
+    grid-area: label;
+    width: 100%;
+    min-width: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    
+}
+
+#filter-date {
+    grid-area: date-input;
+    width: 100%;
+    min-width: 0;
+    /* border: 1px solid var(--color-accent); */
+}
+
+#show-all-btn{
+    grid-area: show;
+    width: 100%;
+
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+#show-all-btn:hover {
+    background-color: var(--color-dark);
+}
+
+
+#filter-date, #show-all-btn {
+    padding: 10px;
+    border-radius: 8px; 
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    .filter-controls {
+        grid-template-columns: 1fr;
+        grid-template-areas: "label" "date-input" "show";
+    }
+}
+
