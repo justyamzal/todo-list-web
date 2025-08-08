@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,18 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="style/general.css">
     <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/dashboard.css">
     <link rel="stylesheet" href="style/form.css">
     <link rel="stylesheet" href="style/filter.css">
     <link rel="stylesheet" href="style/list.css">
     <!-- Google Fonts   -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-   <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
     <div class="app-container">
         <header class="header" id="profile-header">
@@ -35,9 +39,10 @@
         </header>
 
         <main>
-            <section class="dashboard" id="dashboard"></section>
+            <section class="dashboard-grid" id="dashboard-grid">
+            </section>
 
-            <form action="" class="todo-form">
+            <form action="" id="todo-form" class="todo-form">
                 <h2 class="form-title">Buat Tugas Baru</h2>
                 <input type="hidden" id="task-edit-id">
                 <textarea name="" id="task-input" placeholder="Tuliskan tugasmu disini..." required></textarea>
@@ -56,15 +61,16 @@
             <section class="filter-section">
                 <h3 class="filter-title">Filter Tugas</h3>
                 <div class="filter-controls">
-                    <label for="filter-date" class="filter-component"  id="filter-label">Tampilkan tugas untuk tanggal :</label>
-                    <input type="date" class="filter-component"  id="filter-date">
+                    <label for="filter-date" class="filter-component" id="filter-label">Tampilkan tugas untuk tanggal
+                        :</label>
+                    <input type="date" class="filter-component" id="filter-date">
                     <button class="filter-component" id="show-all-btn">Tampilkan Semua</button>
                 </div>
             </section>
 
             <section class="list-section">
                 <h2 class="list-title">To Do</h2>
-                <ul id="to-do-list" class="task-list"></ul>
+                <ul id="todo-list" class="task-list"></ul>
             </section>
 
             <section class="list-section">
@@ -81,6 +87,10 @@
     </div>
     <script src="js/time.js"></script>
     <script src="js/script.js"></script>
-    
+
 </body>
+
 </html>
+
+
+>

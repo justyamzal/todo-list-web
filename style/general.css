@@ -10,6 +10,11 @@
   --color-accent: #B9E5E8;
   --color-secondary: #7AB2D3;
   --color-dark: #4A628A;
+
+  --color-green: #198754;
+  --color-yellow: #ffc107;
+  --color-orange: #FF2A00;
+  --color-red: #c82333;
 }
 
 body {
@@ -30,7 +35,5 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 25px;
   border: 1px solid var(--color-accent);
-
-  
 }
 
