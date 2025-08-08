@@ -16,7 +16,7 @@
     const filterDateInput = document.getElementById('filter-date');
     const showAllBtn = document.getElementById('show-all-btn');
 
-    const dashboardGrid = document.getElementById('priority-input');
+    const dashboardGrid = document.getElementById('dashboard-grid');
 
     const todoList = document.getElementById('todo-list');
     const doneList = document.getElementById('done-list');
@@ -70,32 +70,30 @@ function renderDashboard(){
     const percentageDone = totalTask > 0 ? Math.round((doneTask / totalTask)* 100) : 0;
 
     //counting percentage
-    const highNotDone = task.filter(task => task.priority === 'high' && task.status !== 'done').length;
-    const mediumNotDone =  task.filter(task => task.priority === 'medium' && task.status !== 'done').length;
-    const lowNotDone = task.filter(task => task.priority === 'low' && task.status !== 'done').length;
+    const highNotDone = tasks.filter(task => task.priority === 'high' && task.status !== 'done').length;
+    const mediumNotDone =  tasks.filter(task => task.priority === 'medium' && task.status !== 'done').length;
+    const lowNotDone = tasks.filter(task => task.priority === 'low' && task.status !== 'done').length;
     
     dashboardGrid.innerHTML = `
                 <div class="dashboard-card percentage">
                     <div class="title">Tugas Selesai</div>
-                    <div class="value">${percentageDone}</div>
+                    <div class="value">${percentageDone}%</div>
                 </div>
                 <div class="dashboard-card high">
-                    <div class="title"><span>Prioritas Tinggi</span></div>
+                    <div class="title"><span class="dot"></span>Prioritas Tinggi</div>
                     <div class="value">${highNotDone}</div>
                 </div>
                 <div class="dashboard-card medium">
-                    <div class="title"><span>Prioritas Sedang</span></div>
+                    <div class="title"><span class="dot"></span>Prioritas Sedang</div>
                     <div class="value">${mediumNotDone}</div>
                 </div>
                  <div class="dashboard-card low">
-                    <div class="title"><span>Prioritas Rendah</span></div>
+                    <div class="title"><span class="dot"></span>Prioritas Rendah</div>
                     <div class="value">${lowNotDone}</div>
                 </div>
     `;
 
 }
-
-
 
 //----- App Initialization ----//
     function initializeApp(){
@@ -165,7 +163,7 @@ function renderDashboard(){
 
     function renderUI(){
         renderTasks();
-        // renderDashboard();
+        renderDashboard();
     }
 
     document.querySelector('.app-container').addEventListener('click',(event) =>{
