@@ -152,7 +152,7 @@ function renderDashboard(){
             }
         });
     });
-
+    
     showAllBtn.addEventListener('click',() => {
     filterDateInput.value = '';
     document.querySelectorAll('.task-item').forEach(task => {
@@ -160,7 +160,7 @@ function renderDashboard(){
         });
     });
 
-
+    // ----- Rendering UI ----//
     function renderUI(){
         renderTasks();
         renderDashboard();

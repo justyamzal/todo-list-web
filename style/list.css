@@ -25,7 +25,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);   
     border-radius: 8px;
     margin-bottom: 10px;
-    border-left: 5px solid var(--color-accent);
+    border-left: 7px solid var(--color-accent);
     transition: all 0.3s;
     animation: fadeIn 0.4s ease-in-out;
 }
@@ -86,6 +86,8 @@
 
 .task-item.priority-low {
     border-left-color: var(--color-green);
+
+    /* border-left-color: 2px solid var(--color-green); */
 }
 
 .task-item.priority-medium {
