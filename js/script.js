@@ -61,39 +61,39 @@
     setInterval(updateTime, 1000);
 
 
-//------- Dashboard ------//
-function renderDashboard(){
-    const totalTask = tasks.length;
-    const doneTask = tasks.filter(task => task.status == 'done').length;
-    
-    //percentage of done tasks
-    const percentageDone = totalTask > 0 ? Math.round((doneTask / totalTask)* 100) : 0;
+    //------- Dashboard ------//
+    function renderDashboard(){
+        const totalTask = tasks.length;
+        const doneTask = tasks.filter(task => task.status == 'done').length;
+        
+        //percentage of done tasks
+        const percentageDone = totalTask > 0 ? Math.round((doneTask / totalTask)* 100) : 0;
 
-    //counting percentage
-    const highNotDone = tasks.filter(task => task.priority === 'high' && task.status !== 'done').length;
-    const mediumNotDone =  tasks.filter(task => task.priority === 'medium' && task.status !== 'done').length;
-    const lowNotDone = tasks.filter(task => task.priority === 'low' && task.status !== 'done').length;
-    
-    dashboardGrid.innerHTML = `
-                <div class="dashboard-card percentage">
-                    <div class="title">Tugas Selesai</div>
-                    <div class="value">${percentageDone}%</div>
-                </div>
-                <div class="dashboard-card high">
-                    <div class="title"><span class="dot"></span>Prioritas Tinggi</div>
-                    <div class="value">${highNotDone}</div>
-                </div>
-                <div class="dashboard-card medium">
-                    <div class="title"><span class="dot"></span>Prioritas Sedang</div>
-                    <div class="value">${mediumNotDone}</div>
-                </div>
-                 <div class="dashboard-card low">
-                    <div class="title"><span class="dot"></span>Prioritas Rendah</div>
-                    <div class="value">${lowNotDone}</div>
-                </div>
-    `;
+        //counting percentage
+        const highNotDone = tasks.filter(task => task.priority === 'high' && task.status !== 'done').length;
+        const mediumNotDone =  tasks.filter(task => task.priority === 'medium' && task.status !== 'done').length;
+        const lowNotDone = tasks.filter(task => task.priority === 'low' && task.status !== 'done').length;
+        
+        dashboardGrid.innerHTML = `
+                    <div class="dashboard-card percentage">
+                        <div class="title">Tugas Selesai</div>
+                        <div class="value">${percentageDone}%</div>
+                    </div>
+                    <div class="dashboard-card high">
+                        <div class="title"><span class="dot"></span>Prioritas Tinggi</div>
+                        <div class="value">${highNotDone}</div>
+                    </div>
+                    <div class="dashboard-card medium">
+                        <div class="title"><span class="dot"></span>Prioritas Sedang</div>
+                        <div class="value">${mediumNotDone}</div>
+                    </div>
+                    <div class="dashboard-card low">
+                        <div class="title"><span class="dot"></span>Prioritas Rendah</div>
+                        <div class="value">${lowNotDone}</div>
+                    </div>
+        `;
 
-}
+    }
 
 //----- App Initialization ----//
     function initializeApp(){
